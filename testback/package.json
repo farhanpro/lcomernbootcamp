@@ -1,0 +1,23 @@
+{
+  "name": "lcomernbootcamp",
+  "version": "1.0.0",
+  "description": "my test project",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/farhanpro/lcomernbootcamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/farhanpro/lcomernbootcamp/issues"
+  },
+  "homepage": "https://github.com/farhanpro/lcomernbootcamp#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "nodemon": "^2.0.12"
+  }
+}
