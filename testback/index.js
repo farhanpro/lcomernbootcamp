@@ -1,11 +1,23 @@
 const express = require("express");
 const app = express();
 
-const port = 3000
+const port = 8000
 
 app.get('/login',(req, res) =>{
-  res.send("User is singed out");
-})
+  res.send("Home Page");
+});
+
+const admin =(req,res )=>{
+  return res.send("Home dash board");
+};
+
+
+const  isAdmin = (req,res , next)=>{
+  console.log("IS Admin Is Running");
+  next();
+}
+app.get("/admin", isloggedIn ,isAdmin,admin);
+
 app.get('/hitesh',(req, res)=>{
   res.send("Hitesh Uses Instagram");
 })
