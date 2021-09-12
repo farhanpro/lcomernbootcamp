@@ -1,35 +1,41 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const mongoose = require('mongoose');
-const express = require('express');
+const mongoose = require("mongoose");
+const express = require("express");
 const app = express();
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 const cookieParser = require("cookie-parser");
 const cors = require("cors");
 
-const authRoutes = require("./routes/auth")
-
+// My Routes
+const authRoutes = require("./routes/auth");
+const userRoutes = require("./routes/user");
+const categoryRoutes = require("./routes/category.js");
 //DB Connection
-mongoose.connect(process.env.DATABASE,{
-  useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex:true})
+mongoose
+  .connect(process.env.DATABASE, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+  })
   .then(() => {
     console.log("DB CONNECTED");
-});
+  });
 
 //Middlewares
 app.use(bodyParser.json());
 app.use(cookieParser());
 app.use(cors());
 
-//MY Routs
-app.use("/api",authRoutes);
+//My Routes
+app.use("/api", authRoutes);
+app.use("/api", userRoutes);
+app.use("/api",categoryRoutes);
 
 //PORT
 const port = process.env.PORT || 8000;
 
-//STARTING SERVER
-app.listen(port,()=>{
-  console.log(`App is running at ${port}`);
+//Starting a server
+app.listen(port, () => {
+  console.log(`app is running at ${port}`);
 });

@@ -1,13 +1,16 @@
 const mongoose = require("mongoose");
 
-const categorySchema =  new mongoose.Schema({
-    name :{
-        type: String,
-        trim: true,
-        required: true,
-        maxlength : 32,
-        unique: true
+const categorySchema = new mongoose.Schema(
+  {
+    name: {
+      type: String,
+      trim: true,
+      required: true,
+      maxlength: 32,
+      unique: true
     }
-},{timestamps : true}) // record the changes with time
+  },
+  { timestamps: true }
+);
 
-module.exports = mongoose.model("Category",categorySchema)
+module.exports = mongoose.model("Category", categorySchema);
