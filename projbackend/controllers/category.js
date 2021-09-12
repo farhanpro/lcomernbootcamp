@@ -63,7 +63,7 @@ exports.removeCategory = (req,res) =>{
             });
         }
         res.json({
-            message : `This ${category} was Succesfully deleted`
+            message : `This Category name :- ${category.name} was Succesfully deleted`
         });
     });
 }

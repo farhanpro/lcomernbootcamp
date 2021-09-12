@@ -35,7 +35,7 @@ router.get("/categories",getAllCategory);
 
 // update 
 router.put(
-        "/category/categoryId/:userId",
+        "/category/:categoryId/:userId",
         isSignedIn,
         isAuthenticated,
         isAdmin,
@@ -45,7 +45,7 @@ router.put(
 
 //delete
 router.delete(
-    "/category/categoryId/:userId",
+    "/category/:categoryId/:userId",
     isSignedIn,
     isAuthenticated,
     isAdmin,
