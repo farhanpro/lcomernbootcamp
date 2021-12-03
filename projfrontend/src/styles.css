@@ -7,3 +7,20 @@
 body {
   background: #343a40;
 }
+.cursive{
+  font-family: 'Fleur De Leah', cursive;
+  font-size:100px;
+  margin-left: 350px;
+}
+.cursive2{
+  font-family: 'Fleur De Leah', cursive;
+  font-size:100px;
+  
+}
+
+/* footer {
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+} */
